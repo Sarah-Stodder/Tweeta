@@ -2,10 +2,12 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const path = require('path')
+const { connectDB } = require('./src/db')
 
 
 const app = express()
 dotenv.config()
+connectDB()
 
 //set the view engine to ejs
 app.set('view engine', 'ejs')
